@@ -104,8 +104,9 @@ async function main() {
 
   const secs = ((Date.now() - started) / 1000).toFixed(0);
   const voice = next.countries.filter((c) => c.urls.voice).length;
+  const rcs = next.countries.filter((c) => c.urls.rcs).length;
   console.log(
-    `Done in ${secs}s: ${next.countries.length} countries (${voice} with voice), ${next.columns.length} columns, ` +
+    `Done in ${secs}s: ${next.countries.length} countries (${voice} with voice, ${rcs} with RCS), ${next.columns.length} columns, ` +
       `${prev ? `${changes.length} changed values since ${prev.generatedAt.slice(0, 10)}` : "first run"}.`,
   );
 }
