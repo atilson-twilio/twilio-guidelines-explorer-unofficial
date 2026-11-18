@@ -1,0 +1,36 @@
+# Re-scrapes Twilio's guidelines weekly and commits any changes, so the repo's data stays current.
+# The Weather Report is never in the repo, so the committed data is guideline pages only.
+name: Refresh guidelines
+
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run scrape
+      - name: Check no Weather Report data is committed
+        run: "! grep -lE '\"weatherReport\"|\"wr\\.' ui/data.js data/*.json"
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add data ui/data.js
+          git diff --cached --quiet || git commit -m "Refresh Twilio guidelines data"
+          git push

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Twilio SMS &amp; Voice Guidelines Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <h1>SMS &amp; Voice Guidelines Explorer</h1>
+        <span class="meta" id="meta"></span>
+      </div>
+      <div class="search">
+        <input id="search" type="search" placeholder="Search countries, codes and guideline text, or paste a list of countries…  ( / )" autocomplete="off" />
+      </div>
+      <div class="actions">
+        <button id="btn-columns" type="button">Columns</button>
+        <button id="btn-changes" type="button">Changes</button>
+        <button id="btn-export" type="button" title="Download the current view as CSV">Export CSV</button>
+        <button id="btn-link" type="button" title="Copy a link to this exact view">Copy link</button>
+      </div>
+    </header>
+
+    <nav class="presets" id="presets" aria-label="Saved views"></nav>
+    <p class="preset-desc" id="preset-desc"></p>
+
+    <section class="filters" aria-label="Filters">
+      <div class="filter-group" id="region-filter" role="group" aria-label="Region"></div>
+      <label class="toggle"><input type="checkbox" id="voice-only" /> Only countries with voice guidelines</label>
+      <label class="toggle"><input type="checkbox" id="wrap-text" /> Show full text</label>
+      <div class="active-filters" id="active-filters"></div>
+      <span class="count" id="count"></span>
+    </section>
+
+    <section class="compare-bar" id="compare-bar" hidden>
+      <span id="compare-label"></span>
+      <button type="button" id="btn-compare" class="primary">Compare side by side</button>
+      <button type="button" id="btn-compare-clear">Clear</button>
+    </section>
+
+    <main class="table-wrap" id="table-wrap">
+      <table id="grid" class="grid"></table>
+      <p class="empty" id="empty" hidden>No countries match. Try clearing a filter.</p>
+    </main>
+
+    <footer class="footer">
+      <span class="legend" id="legend"></span>
+      <span class="disclaimer">
+        Unofficial snapshot of Twilio's public
+        <a href="https://www.twilio.com/en-us/guidelines/sms" target="_blank" rel="noopener noreferrer">SMS</a>,
+        <a href="https://www.twilio.com/en-us/guidelines/voice" target="_blank" rel="noopener noreferrer">Voice</a> and
+        <a href="https://www.twilio.com/en-us/guidelines/porting" target="_blank" rel="noopener noreferrer">Porting</a>
+        guidelines, plus Twilio's Weather Report (current availability, porting and list prices; export date at the top).
+        Status badges are derived automatically from the published text. Always confirm on the linked Twilio page.
+      </span>
+    </footer>
+
+    <!-- Overlays -->
+    <div class="popover" id="popover" role="dialog" hidden></div>
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer-head">
+        <h2 id="drawer-title"></h2>
+        <button type="button" class="icon" id="drawer-close" aria-label="Close">✕</button>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+    <div class="toast" id="toast" role="status" hidden></div>
+
+    <script src="data.js"></script>
+    <!-- Optional, never published: the same data plus the Weather Report (npm run weather). -->
+    <script src="data.local.js"></script>
+    <script src="presets.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

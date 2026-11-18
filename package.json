@@ -1,0 +1,17 @@
+{
+  "name": "twilio-guidelines-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scrapes Twilio's SMS and Voice country guidelines, merges the Weather Report, into a searchable, offline UI.",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scraper/scrape.js",
+    "weather": "node scraper/merge-weather.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

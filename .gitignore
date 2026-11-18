@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+
+# Weather Report: internal data, never committed or published (see README).
+weather-report-data/
+data/local/
+ui/data.local.js

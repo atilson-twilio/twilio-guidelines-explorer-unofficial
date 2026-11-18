@@ -1,0 +1,296 @@
+[
+ {
+  "date": "2026-11-18T03:30:01.997Z",
+  "previous": "2026-11-18T03:01:07.665Z",
+  "changes": [
+   {
+    "iso": "TR",
+    "column": "sms.alpha.dynamic.twilio-supported",
+    "before": "Supported",
+    "after": "N/A"
+   },
+   {
+    "iso": "TR",
+    "column": "sms.alpha.dynamic.sender-id-preserved",
+    "before": "No",
+    "after": "N/A"
+   },
+   {
+    "iso": "TR",
+    "column": "sms.alpha.dynamic.ucs-2-support",
+    "before": "Supported",
+    "after": "N/A"
+   },
+   {
+    "iso": "TR",
+    "column": "sms.alpha.dynamic.use-case-restrictions",
+    "before": "Sender ID Registration is required in Turkey. Starting on November 18th, 2026, messages with unregistered Sender IDs to Turkish networks will be blocked. To continue sending messages, you must use a registered Alphanumeric Sender ID.",
+    "after": "N/A"
+   },
+   {
+    "iso": "TR",
+    "column": "sms.numbers.long-code-international.twilio-supported",
+    "before": "Supported",
+    "after": "N/A"
+   },
+   {
+    "iso": "TR",
+    "column": "sms.numbers.long-code-international.sender-id-preserved",
+    "before": "No",
+    "after": "N/A"
+   },
+   {
+    "iso": "TR",
+    "column": "sms.numbers.long-code-international.ucs-2-support",
+    "before": "Supported",
+    "after": "N/A"
+   },
+   {
+    "iso": "TR",
+    "column": "sms.numbers.long-code-international.use-case-restrictions",
+    "before": "SMS delivery to the Turkish Republic of Northern Cyprus is not supported.\nSender ID Registration is required in Turkey. Starting on November 18th, 2026, messages with unregistered Sender IDs to Turkish networks will be blocked. To continue sending messages, you must use a registered Alphanumeric Sender ID.",
+    "after": "N/A"
+   }
+  ]
+ },
+ {
+  "date": "2026-11-18T03:01:07.727Z",
+  "previous": "2026-10-22T19:43:34.687Z",
+  "changes": [
+   {
+    "iso": "AU",
+    "column": "porting.guidelines.timeframe",
+    "before": "For Toll Free and Geographic (local) numbers, up to 6 weeks after documentation submission, depending on the complexity of the port and the time required by the current service provider.\nFor Mobile numbers, the port completion takes roughly around 1 week. The port date shared by the team is tentative in nature. Completion depends on the validation carried out, which takes place on the port date. Twilio will notify on the day of the port if there is any port rejection.",
+    "after": "For Toll Free and Geographic (local) numbers, up to 6 weeks after documentation submission, depending on the complexity of the port and the time required by the current service provider.\nFor Mobile numbers, the port completion takes roughly around 1 week. The port date shared by the team is tentative in nature. Completion depends on the validation carried out, which takes place on the port date. Twilio will notify on the day of the port if there is any port rejection.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "AT",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 2 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "BE",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "BR",
+    "column": "voice.reach.outbound-restrictions",
+    "before": "Outbound Calls from International Calling Numbers are allowed.\nOutbound Calls from Twilio owned Brazil phone numbers are allowed.\nOutbound Calls using Brazilian Toll-free numbers are not allowed.\nOutbound Calls from non-Twilio owned Brazilian numbers are not allowed.",
+    "after": "Outbound Calls from International Calling Numbers are allowed.\nOutbound Calls from Twilio owned Brazil phone numbers are allowed.\nOutbound Calls using Brazilian Toll-free numbers are not allowed.\nOutbound Calls from non-Twilio owned Brazilian numbers are not allowed.\nProvisional Measure (Medida Provisória) No. 1,394/2026, published on September 25, 2026, prohibits fixed-odds betting in Brazil, including sports betting and online casino games, as well as its advertising. Betting-related traffic to recipients in Brazil is not permitted on any channel, voice calls, promotional and transactional messages (such as one-time passwords), may be blocked. The measure is in effect and under review by the Brazilian Congress."
+   },
+   {
+    "iso": "BR",
+    "column": "porting.guidelines.timeframe",
+    "before": "Porting Toll-Free & Local phone numbers:\n• Once you've submitted all required documentation/information, takes upto 8-11 business days, depending on the complexity of the port and time required by the current service provider.\nPorting National phone numbers:\n• Once you've submitted all required documentation/information, takes upto 8-11 business days, depending on the complexity of the port and time required by the current service provider.\nThe port can be extended beyond the mentioned time if we face carrier rejections",
+    "after": "Porting Toll-Free & Local phone numbers:\n• Once you've submitted all required documentation/information, up to 2-3 weeks, depending on the complexity of the port and time required by the current service provider.\nPorting National phone numbers:\n• Once you've submitted all required documentation/information, up to 5-7 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "CA",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, takes 5-7 working days depending on the complexity of the port and time required by the current service provider. The port can be extended beyond the mentioned time if we face carrier rejections.\nPlease note that you will need to approve the port within a 90-minute timeframe from receiving the port approval SMS text from the losing provider. Unless you respond to the text message within the given timeframe, the port will get rejected.",
+    "after": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nPlease note that you will need to approve the port within a 90-minute timeframe from receiving the port approval SMS text from the losing provider. Unless you respond to the text message within the given timeframe, the port will get rejected.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "CZ",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 2 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period"
+   },
+   {
+    "iso": "DK",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "FI",
+    "column": "porting.guidelines.timeframe",
+    "before": "• 2-4 weeks after documentation/information submission, depending on the complexity of the port and time required by the current service provider.",
+    "after": "• 2-4 weeks after documentation/information submission, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "FR",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "DE",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 2 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "HK",
+    "column": "voice.reach.outbound-restrictions",
+    "before": "Outbound calls from Toll Free numbers are not allowed.\nFrom March 2023, for outbound calling to Hong Kong destinations from Hong Kong caller IDs, please use Twilio numbers as the caller ID (From number).\nMaking calls using non-Twilio phone numbers via the Verified Caller ID service will no longer be supported in alignment with the measures introduced by the Office of the Communications Authority (OFCA) to strengthen protection against scams.",
+    "after": "High volumes of outbound calls (e.g., exceeding 5,000 calls per day from a single entity/campaign) characterized by short average call durations (e.g., under 48 seconds) or repetitive dialer patterns may trigger automated carrier-level network blocking as they are automatically seen as potential spam or robocalls.\nOutbound calls from Toll Free numbers are not allowed.\nFrom March 2023, for outbound calling to Hong Kong destinations from Hong Kong caller IDs, please use Twilio numbers as the caller ID (From number).\nMaking calls using non-Twilio phone numbers via the Verified Caller ID service will no longer be supported in alignment with the measures introduced by the Office of the Communications Authority (OFCA) to strengthen protection against scams."
+   },
+   {
+    "iso": "HK",
+    "column": "voice.reach.best-practices",
+    "before": "N/A",
+    "after": "Customers should design outbound calling workflows to avoid repetitive, high-frequency, or short-duration call patterns that mimic automated robocalls or suspicious calling behavior.\nCustomers operating high-frequency calling campaigns to Hong Kong should actively monitor answer rates and call duration metrics. A sudden drop in connection rates often indicates carrier-level filtering due to perceived spam thresholds.\nDistribute high-volume traffic responsibly across appropriate calling windows and legitimate caller IDs rather than concentrating short call bursts through single originating channels."
+   },
+   {
+    "iso": "IE",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "IT",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 6 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 6 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "CI",
+    "column": "sms.numbers.long-code-international.operator-network-capability",
+    "before": "Not Supported",
+    "after": "Supported"
+   },
+   {
+    "iso": "CI",
+    "column": "sms.numbers.long-code-international.sender-id-preserved",
+    "before": "No",
+    "after": "Yes"
+   },
+   {
+    "iso": "CI",
+    "column": "sms.numbers.long-code-international.use-case-restrictions",
+    "before": "Numeric Sender IDs are not supported by the MTN network in Ivory Coast. Submitting messages with a Numeric Sender ID will result in delivery failure.",
+    "after": "---"
+   },
+   {
+    "iso": "CI",
+    "column": "sms.numbers.long-code-international.best-practices",
+    "before": "Twilio suggests using a pre-registered Alphanumeric Sender ID in Ivory Coast",
+    "after": "---"
+   },
+   {
+    "iso": "JP",
+    "column": "porting.guidelines.timeframe",
+    "before": "3-4 weeks after documentation/information submission, depending on the complexity of the port and time required by the current service provider.",
+    "after": "3-4 weeks after documentation/information submission, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "LU",
+    "column": "porting.guidelines.timeframe",
+    "before": "• Up to 2 weeks after you have submitted all the required documentation/information, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Up to 2 weeks after you have submitted all the required documentation/information, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "MW",
+    "column": "sms.numbers.long-code-international.best-practices",
+    "before": "Dynamic Numeric Sender IDs are not supported by the network Airtel.",
+    "after": "----"
+   },
+   {
+    "iso": "MX",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 8-11 business days, depending on the complexity of the port and time required by the current service provider. The port can be extended beyond the mentioned time if we face carrier rejections.",
+    "after": "Once you submit all required documentation/information, up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "NA",
+    "column": "sms.alpha.dynamic.twilio-supported",
+    "before": "Not Supported",
+    "after": "Supported"
+   },
+   {
+    "iso": "NL",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "NZ",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required information, up to 6 weeks, depending on the complexity of the port and the time required by the current service provider.",
+    "after": "Once you submit all required information, up to 6 weeks, depending on the complexity of the port and the time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "NO",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "PT",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you've submitted all required documentation, it can take up to 2 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you've submitted all required documentation, it can take up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "PR",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required information, takes 5-7 working days, depending on the complexity of the port and time required by the current service provider. The port can be extended beyond the mentioned time if we face carrier rejections.",
+    "after": "Once you submit all required information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "RO",
+    "column": "porting.guidelines.timeframe",
+    "before": "• 2-4 weeks after documentation/information submission, depending on the complexity of the port and time required by the current service provider.",
+    "after": "2-4 weeks after documentation/information submission, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "SI",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you've submitted all required documentation/information, it can take up to 2 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you've submitted all required documentation/information, it can take up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "ZA",
+    "column": "porting.guidelines.timeframe",
+    "before": "For Geographic (local) numbers, up to 6 weeks after documentation submission, depending on the complexity of the port and the time required by the current service provider.",
+    "after": "For Geographic (local) numbers, up to 6 weeks after documentation submission, depending on the complexity of the port and the time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "ES",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\n• For Toll-Free numbers up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\n• For Toll-Free numbers up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "SE",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information, up to 4 - 6 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all required documentation/information, up to 4 - 6 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "CH",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all the required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.",
+    "after": "Once you submit all the required documentation/information, up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   },
+   {
+    "iso": "UA",
+    "column": "sms.numbers.long-code-international.use-case-restrictions",
+    "before": "Network operators in Ukraine do not support Numeric Sender IDs.\nSMS submissions with Numeric Sender IDs will be attempted on a best effort basis by replacing the Numeric Sender ID with a generic Alpha one outside Twilio's platfrom.\nAdditionally for the network Trimob those messages will fail completely.\nTwilio recommends using Alphanumeric Sender IDs to ensure message delivery.",
+    "after": "Network operators in Ukraine do not support Numeric Sender IDs.\nSMS submissions with Numeric Sender IDs will be attempted on a best effort basis by replacing the Numeric Sender ID with a generic Alpha one outside Twilio's platfrom.\nTwilio recommends using Alphanumeric Sender IDs to ensure message delivery."
+   },
+   {
+    "iso": "GB",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 4 - 6 weeks, depending on the complexity of the port and time required by the current service provider.\n• For Mobile numbers up to 5-7 business days.",
+    "after": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 4 - 6 weeks, depending on the complexity of the port and time required by the current service provider.\n• For Mobile numbers up to 5-7 business days.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   }
+  ]
+ },
+ {
+  "date": "2026-10-22T19:43:34.762Z",
+  "previous": "2026-10-19T19:26:08.521Z",
+  "changes": [
+   {
+    "iso": "BR",
+    "column": "sms.general.compliance-considerations",
+    "before": "As a best practice when sending SMS to smaller or regional operators, such as Surf Telecom in Brazil, we recommend avoiding the use of special GSM-7 characters. These networks may have limited character set support, which can result in characters being removed, replaced, or messages being encoded differently to ensure delivery.\nOi does not support delivery report. Several major carriers in Brazil substitute accented characters for ASCII equivalents. Oi, NEXTEL, and CTBC (Algar) do not support unicode. Sending marketing messages outside the hours of 09:00 and 22:00 local time and all day on Sunday is prohibited. Be aware that Brazil spans three time zones. Messages promoting contests or telecommunication services are prohibited. Sending adult content, controlled substance, and cannabis related content are also strictly prohibited.\nMessage delivery to M2M numbers is on best effort basis only.\nTwilio strongly encourages customers to review proposed use cases with qualified legal counsel to make sure that they comply with all applicable laws. The following are some general best practices:\n• Get opt-in consent from each end user before sending any communication to them, particular for marketing or other non-essential communications.\n• Only communicate during an end user's daytime hours unless it is urgent.\n• SMS campaigns should support HELP/STOP messages, and similar messages, in the end user's local language.\n• Do not contact end users on do-not-call or do-not-disturb registries.",
+    "after": "The Superior Electoral Court (Tribunal Superior Electoral - TSE) established that certain messages containing political-electoral propaganda are not permitted. This measure is in effect, and Twilio follows all applicable laws and regulations.\nAs a best practice when sending SMS to smaller or regional operators, such as Surf Telecom in Brazil, we recommend avoiding the use of special GSM-7 characters. These networks may have limited character set support, which can result in characters being removed, replaced, or messages being encoded differently to ensure delivery.\nOi does not support delivery report. Several major carriers in Brazil substitute accented characters for ASCII equivalents. Oi, NEXTEL, and CTBC (Algar) do not support unicode. Sending marketing messages outside the hours of 09:00 and 22:00 local time and all day on Sunday is prohibited. Be aware that Brazil spans three time zones. Messages promoting contests or telecommunication services are prohibited. Sending adult content, controlled substance, and cannabis related content are also strictly prohibited.\nMessage delivery to M2M numbers is on best effort basis only.\nTwilio strongly encourages customers to review proposed use cases with qualified legal counsel to make sure that they comply with all applicable laws. The following are some general best practices:\n• Get opt-in consent from each end user before sending any communication to them, particular for marketing or other non-essential communications.\n• Only communicate during an end user's daytime hours unless it is urgent.\n• SMS campaigns should support HELP/STOP messages, and similar messages, in the end user's local language.\n• Do not contact end users on do-not-call or do-not-disturb registries."
+   }
+  ]
+ }
+]
