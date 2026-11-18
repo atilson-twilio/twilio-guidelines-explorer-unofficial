@@ -33,7 +33,7 @@
   const COL = new Map(COLS.map((c) => [c.id, c]));
   const COUNTRIES = DATA.countries;
   const BY_ISO = new Map(COUNTRIES.map((c) => [c.iso, c]));
-  const CHANNEL_LABEL = { sms: "SMS", voice: "Voice", porting: "Porting", wr: "Weather Report" };
+  const CHANNEL_LABEL = { sms: "SMS", voice: "Voice", rcs: "RCS", porting: "Porting", wr: "Weather Report" };
   const WR = DATA.weatherReport || null;
   // Saved views, adjusted to the loaded data: the published build has no Weather Report, so its
   // columns, filters and sort drop out (see presets.js).
@@ -186,6 +186,7 @@
     if (col.channel === "wr") return col.group === "check" ? "—" : "Not listed";
     if (col.channel === "porting" && !country.urls.porting) return "No porting guidelines";
     if (col.channel === "voice" && !country.urls.voice) return "No voice guidelines";
+    if (col.channel === "rcs" && !country.urls.rcs) return "No RCS guidelines";
     if (col.channel === "sms" && !country.urls.sms) return "No SMS guidelines";
     return "—";
   }
@@ -499,8 +500,9 @@
 
   function renderStatic() {
     const voiceCount = COUNTRIES.filter((c) => c.urls.voice).length;
+    const rcsCount = COUNTRIES.filter((c) => c.urls.rcs).length;
     el.meta.textContent =
-      `Scraped ${fmtDate(DATA.generatedAt)} · ${COUNTRIES.length} countries · ${voiceCount} with voice guidelines` +
+      `Scraped ${fmtDate(DATA.generatedAt)} · ${COUNTRIES.length} countries · ${voiceCount} with voice guidelines · ${rcsCount} with RCS guidelines` +
       (WR ? ` · Weather Report exported ${fmtDate(WR.exportedAt)}` : "");
     el.legend.innerHTML =
       ["yes", "limited", "required", "notRequired", "no", "info"].map((s) => `<span class="badge ${s}">${esc(STATUS[s].label)}</span>`).join("") +
@@ -817,7 +819,7 @@
       ["Region", c.region],
     ].filter(([, v]) => v);
     const links =
-      ["sms", "voice", "porting"]
+      ["sms", "voice", "rcs", "porting"]
         .map((ch) =>
           c.urls[ch]
             ? `<a href="${esc(c.urls[ch])}" target="_blank" rel="noopener noreferrer">Twilio ${CHANNEL_LABEL[ch]} guidelines ↗</a>`
@@ -941,11 +943,13 @@
     const q = (s) => `"${String(s ?? "").replace(/^[=+\-@\t\r]/, "'$&").replace(/"/g, '""')}"`;
     const showsPorting = viewCols.some((col) => col.channel === "porting" || (col.channel === "wr" && col.group === "porting"));
     const portingHead = showsPorting ? ["Porting guidelines URL", "Porting FAQ URL"] : [];
-    const head = ["Country", "ISO", "Region", "Dialing code", ...viewCols.map(fullLabel), "SMS guidelines URL", "Voice guidelines URL", ...portingHead];
+    const showsRcs = viewCols.some((col) => col.channel === "rcs");
+    const head = ["Country", "ISO", "Region", "Dialing code", ...viewCols.map(fullLabel), "SMS guidelines URL", "Voice guidelines URL", ...(showsRcs ? ["RCS guidelines URL"] : []), ...portingHead];
     const lines = [head.map(q).join(",")];
     for (const c of viewRows) {
       lines.push(
         [c.name, c.iso, c.region, c.dialingCode, ...viewCols.map((col) => (col.kind === "link" ? (c.values[col.id]?.u || []).join(" ") : c.values[col.id]?.t ?? "")), c.urls.sms || "", c.urls.voice || ""]
+          .concat(showsRcs ? [c.urls.rcs || ""] : [])
           .concat(showsPorting ? [c.urls.porting || "", c.urls.portingFaq || ""] : [])
           .map(q)
           .join(","),

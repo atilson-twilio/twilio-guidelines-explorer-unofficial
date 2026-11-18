@@ -27,8 +27,9 @@ const SECTIONS = {
     { key: "emergency", label: "Emergency calling", match: /^emergency/i },
   ],
   porting: [{ key: "guidelines", label: "Porting guidelines", match: /^guidelines/i }],
+  rcs: [{ key: "guidelines", label: "RCS guidelines", match: /^guidelines/i }],
 };
-const CHANNEL_ORDER = ["sms", "voice", "porting"];
+const CHANNEL_ORDER = ["sms", "voice", "rcs", "porting"];
 
 // Porting pages link the country's porting FAQ under "How To Submit". The old support.twilio.com
 // URLs redirect to help.twilio.com; store the current form. Japan links a Japanese and an English
@@ -222,6 +223,29 @@ export function normalize(pages, meta) {
         c.values[id] = h ? { t: text, h, s } : { t: text, s };
       }
     }
+  }
+
+  // RCS pages have no "supported" row: a country is RCS-supported when Twilio publishes an RCS
+  // guideline page for it (the RCS index lists the countries where Twilio offers RCS).
+  if (pages.some((p) => p.channel === "rcs")) {
+    const id = "rcs.guidelines.supported";
+    const counts = {};
+    for (const c of countries.values()) {
+      const v = c.urls.rcs ? { t: "Supported", s: "yes" } : { t: "Not supported", s: "no" };
+      c.values[id] = v;
+      counts[v.s] = (counts[v.s] || 0) + 1;
+    }
+    columns.set(id, {
+      id,
+      channel: "rcs",
+      group: "guidelines",
+      groupLabel: "RCS guidelines",
+      sub: null,
+      label: "RCS supported",
+      description: "Supported when Twilio publishes RCS guidelines for this country (Twilio's RCS guideline index lists the countries where it offers RCS).",
+      counts,
+      order: -1, // first in its group
+    });
   }
 
   // A column is a "status" column when most of its non-blank values classify cleanly;

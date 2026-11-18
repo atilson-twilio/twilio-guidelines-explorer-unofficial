@@ -15,7 +15,7 @@ window.GUIDELINE_PRESETS = [
     id: "overview",
     label: "Overview",
     description:
-      "Headline SMS and voice capabilities for every country, with the Weather Report's view of what Twilio sells today next to the matching guideline. A dashed outline means the two disagree.",
+      "Headline SMS, RCS and voice capabilities for every country, with the Weather Report's view of what Twilio sells today next to the matching guideline. A dashed outline means the two disagree.",
     columns: [
       "sms.general.two-way-sms-supported",
       "sms.numbers.long-code-domestic.twilio-supported",
@@ -24,11 +24,12 @@ window.GUIDELINE_PRESETS = [
       "sms.alpha.dynamic.twilio-supported",
       "sms.numbers.short-code.twilio-supported",
       "wr.shortcode.availability",
+      "rcs.guidelines.supported",
       "voice.reach.inbound.domestic",
       "voice.reach.outbound.international",
       "voice.callerid.outbound.international",
     ],
-    withoutWeatherReport: { description: "Headline SMS and voice capabilities for every country." },
+    withoutWeatherReport: { description: "Headline SMS, RCS and voice capabilities for every country." },
   },
   {
     id: "sms-intl",
@@ -157,6 +158,24 @@ window.GUIDELINE_PRESETS = [
       "porting.guidelines.regulatory-bodies",
     ],
     filters: { "porting.guidelines.portable-numbers": { s: ["info"] } },
+  },
+  {
+    id: "rcs",
+    label: "RCS",
+    description:
+      "Twilio's RCS (Rich Communication Services) guidelines for the countries that have them: prerequisites, restrictions, sender requirements, onboarding timeframe and pricing. Click a cell for the RCS guideline page.",
+    columns: [
+      "rcs.guidelines.supported",
+      "rcs.guidelines.prerequisites",
+      "rcs.guidelines.restrictions",
+      "rcs.guidelines.requirements",
+      "rcs.guidelines.timeframe",
+      "rcs.guidelines.regulatory-bodies",
+      "rcs.guidelines.pricing",
+      "rcs.guidelines.other-options",
+      "rcs.guidelines.next-steps",
+    ],
+    filters: { "rcs.guidelines.supported": { s: ["yes"] } },
   },
   {
     id: "sources",

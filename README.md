@@ -1,7 +1,8 @@
-# Twilio SMS & Voice Guidelines Explorer
+# Twilio SMS, Voice & RCS Guidelines Explorer
 
 A searchable, filterable table of Twilio's per-country [SMS](https://www.twilio.com/en-us/guidelines/sms),
-[Voice](https://www.twilio.com/en-us/guidelines/voice) and [Porting](https://www.twilio.com/en-us/guidelines/porting)
+[Voice](https://www.twilio.com/en-us/guidelines/voice), [RCS](https://www.twilio.com/en-us/guidelines/rcs) and
+[Porting](https://www.twilio.com/en-us/guidelines/porting)
 guidelines, for answering questions like *"which
 countries can we reach by SMS or voice from out-of-country numbers?"*
 
@@ -35,6 +36,8 @@ built in (see the scrape date at the top of the page).
 - **Help Center articles**: the *Alphanumeric sender ID* and *Short codes* views include a link column to the
   country's Twilio Help Center article: alphanumeric sender ID registration (documents required) and short code
   best practices. The same links appear in those columns' "more info" links and in the country panel.
+- **RCS**: the *RCS* view shows Twilio's RCS guidelines (22 countries) in full. *Overview* has an *RCS supported*
+  column: supported when Twilio publishes RCS guidelines for the country, which is how Twilio lists where it offers RCS.
 - **Porting**: *Porting requirements* shows Twilio's porting guidelines (28 countries) in full. For porting cells,
   the "more info" links go to the porting guideline page, then the country's porting FAQ on help.twilio.com
   (found automatically from the porting page).
@@ -127,7 +130,7 @@ The workflow fails rather than commit if the data contains any Weather Report fi
 
 ```
 scraper/
-  raw.js        fetches the SMS, Voice and Porting index pages, then every country page (4 at a time, with retries)
+  raw.js        fetches the SMS, Voice, RCS and Porting index pages, then every country page (4 at a time, with retries)
   parse.js      turns each page's tables into { section, column, row, text, html } fields
   normalize.js  merges SMS + Voice + Porting per country (and finds each porting FAQ link), standardises names, classifies each value's status, diffs runs
   weather.js    reads the Weather Report CSVs, adds wr.* columns and cross-checks them against the guidelines

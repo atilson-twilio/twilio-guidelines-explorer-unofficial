@@ -1,4 +1,4 @@
-// Step 1 of the scrape: download every SMS, Voice and Porting country page and parse its tables.
+// Step 1 of the scrape: download every SMS, Voice, Porting and RCS country page and parse its tables.
 
 import { fetchText, mapLimit } from "./fetch.js";
 import { parseGuidelinePage, parseIndexPage } from "./parse.js";
@@ -7,6 +7,7 @@ export const INDEX_URLS = {
   sms: "https://www.twilio.com/en-us/guidelines/sms",
   voice: "https://www.twilio.com/en-us/guidelines/voice",
   porting: "https://www.twilio.com/en-us/guidelines/porting",
+  rcs: "https://www.twilio.com/en-us/guidelines/rcs",
 };
 
 /**
