@@ -9,6 +9,7 @@
 import { scrapeRaw, INDEX_URLS } from "./raw.js";
 import { normalize } from "./normalize.js";
 import { PUBLIC, LOCAL, WEATHER_DIR, readJson, writeFile, writeOutputs, removeLocalOutputs } from "./output.js";
+import { fetchHelpArticles, addHelpArticles, carryOverHelpArticles } from "./help.js";
 import { loadWeatherReport, mergeWeather, stripWeather, reportWeather } from "./weather.js";
 
 function parseArgs(argv) {
@@ -51,13 +52,28 @@ async function main() {
     console.log("Fetching guideline pages from twilio.com ...");
     raw = await scrapeRaw({ only: args.only });
   }
-  if (args.saveRaw) writeFile(args.saveRaw, JSON.stringify(raw));
   for (const e of raw.errors) console.warn(`  ! ${e}`);
 
   const next = normalize(raw.pages, { generatedAt: new Date().toISOString(), sources: INDEX_URLS });
   // Stripping is a no-op for current files; it cleans older ones that had the Weather Report merged in.
   const prevFile = readJson(PUBLIC.dataJson, null);
   const prev = prevFile && stripWeather(prevFile);
+
+  // Help Center articles (alphanumeric registration, short code best practices). Not fatal: if the
+  // Help Center can't be reached, keep the previous run's links rather than dropping the columns.
+  try {
+    if (!raw.help) {
+      if (args.fromRaw) throw new Error("not in the --from-raw file");
+      raw.help = await fetchHelpArticles();
+    }
+    const { matched, unmatched } = addHelpArticles(next, raw.help);
+    console.log(`Help Center: ${Object.entries(matched).map(([id, n]) => `${n} countries for ${id}`).join(", ")}`);
+    if (unmatched.length) console.warn(`  ! Help Center articles with no matching country (add to TITLE_ALIASES in scraper/help.js): ${unmatched.join(" | ")}`);
+  } catch (err) {
+    console.warn(`  ! Help Center articles not updated (${err.message})${carryOverHelpArticles(prev, next) ? "; kept the previous links" : ""}.`);
+  }
+
+  if (args.saveRaw) writeFile(args.saveRaw, JSON.stringify(raw));
 
   if (args.only) {
     // Partial runs are for testing: print a summary and don't touch the saved dataset.

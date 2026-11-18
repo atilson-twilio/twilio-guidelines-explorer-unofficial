@@ -32,6 +32,9 @@ built in (see the scrape date at the top of the page).
 - **Columns**: add any of the ~95 available fields.
 - **Export CSV** downloads exactly what's on screen. **Copy link** copies a URL that reopens the current view.
 - **Changes** lists what changed in Twilio's text between scrapes. Changed cells are outlined.
+- **Help Center articles**: the *Alphanumeric sender ID* and *Short codes* views include a link column to the
+  country's Twilio Help Center article: alphanumeric sender ID registration (documents required) and short code
+  best practices. The same links appear in those columns' "more info" links and in the country panel.
 - **Porting**: *Porting requirements* shows Twilio's porting guidelines (28 countries) in full. For porting cells,
   the "more info" links go to the porting guideline page, then the country's porting FAQ on help.twilio.com
   (found automatically from the porting page).
@@ -58,6 +61,16 @@ npm install
 npm run scrape        # ~2 minutes; rewrites ui/data.js and data/
 ```
 
+### Refresh from the page
+
+Run `npm start` and open <http://localhost:4173>. The **Refresh data** button (top right) then runs the scrape
+and shows its progress, and the page reloads with the new data when it finishes. If the scrape fails, the
+existing data is kept and the output is shown. The server listens on 127.0.0.1 only (`PORT=8080 npm start` to
+change the port). Opened straight from `ui/index.html`, the button explains how to refresh instead.
+
+If the data is more than 7 days old, a warning banner appears at the top of the page (in either mode). It can
+be dismissed for the current browser session.
+
 ### Add the Weather Report (local only)
 
 The Weather Report is an internal Twilio Google Sheet. It is read from CSV exports rather than the Google API,
@@ -77,6 +90,18 @@ The merge prints any Weather Report country it couldn't match to a guideline pag
 Porting / Pre-registration → supported; Private Offering / Beta / By request through Sales / Custom Porting /
 Paused → limited; Not Available / Unavailable → not supported. A country missing from a tab shows as *Not listed*.
 Prices are Twilio list prices as written in the sheet (decimal commas converted to points).
+
+### Help Center articles
+
+The scrape also reads two [Twilio Help Center](https://help.twilio.com) sections:
+[SMS](https://help.twilio.com/sections/205104768-SMS) (alphanumeric sender ID registration) and
+[Short Codes](https://help.twilio.com/sections/205112927-Short-Codes) (best practices). help.twilio.com is a
+JavaScript app, but it loads each section's article list from a public JSON endpoint
+(`https://www.twilio.com/console/help-center/v1/knowledge-base/sections/<id>`), so this is one request per
+section, with no browser. Articles are picked by title (e.g. *…Register Your Alphanumeric Sender ID in Kenya*,
+*Brazil Short Code Best Practices*) and matched to a country by the name in the title. New articles are picked up
+automatically. A title the scraper can't match to a country is printed; add its spelling to `TITLE_ALIASES` in
+[scraper/help.js](scraper/help.js). If the Help Center can't be reached, the previous links are kept.
 
 ### Scrape options
 

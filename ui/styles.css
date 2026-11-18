@@ -427,8 +427,42 @@ mark { background: var(--mark); color: inherit; border-radius: 2px; padding: 0 1
 }
 .toast[hidden] { display: none; }
 
+/* ---- stale data warning and refresh ---- */
+.stale-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 16px 0;
+  padding: 8px 8px 8px 14px;
+  background: var(--limited-bg);
+  color: var(--limited);
+  border: 1px solid var(--limited);
+  border-radius: var(--radius);
+  font-size: 13px;
+}
+.stale-banner[hidden] { display: none; }
+.stale-banner span { flex: 1; }
+.stale-banner button { font-size: 13px; padding: 4px 10px; }
+.stale-banner button.icon { color: inherit; font-size: 15px; }
+button:disabled { opacity: 0.6; cursor: progress; }
+.scrape-log {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  font-size: 12px;
+  max-height: 60vh;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+.scrape-failed { color: var(--no); }
+
+/* ---- Help Center link cells ---- */
+.cell-text.links a { display: block; overflow: hidden; text-overflow: ellipsis; }
+.cell-text.links a + a { margin-top: 2px; }
+
 @media print {
-  .topbar .actions, .presets, .filters, .compare-bar, .footer .legend { display: none; }
+  .topbar .actions, .stale-banner, .presets, .filters, .compare-bar, .footer .legend { display: none; }
   .table-wrap { overflow: visible; border: none; }
   .grid thead th, .grid .country { position: static; }
 }

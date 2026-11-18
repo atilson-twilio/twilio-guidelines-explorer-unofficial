@@ -5,6 +5,7 @@
   "description": "Scrapes Twilio's SMS and Voice country guidelines, merges the Weather Report, into a searchable, offline UI.",
   "type": "module",
   "scripts": {
+    "start": "node scraper/server.js",
     "scrape": "node scraper/scrape.js",
     "weather": "node scraper/merge-weather.js"
   },

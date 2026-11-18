@@ -20,8 +20,15 @@
         <button id="btn-changes" type="button">Changes</button>
         <button id="btn-export" type="button" title="Download the current view as CSV">Export CSV</button>
         <button id="btn-link" type="button" title="Copy a link to this exact view">Copy link</button>
+        <button id="btn-refresh" type="button" title="Re-scrape Twilio's guideline pages now">Refresh data</button>
       </div>
     </header>
+
+    <div class="stale-banner" id="stale-banner" role="alert" hidden>
+      <span id="stale-text"></span>
+      <button type="button" class="primary" id="stale-refresh">Refresh data</button>
+      <button type="button" class="icon" id="stale-dismiss" aria-label="Dismiss for this session" title="Dismiss for this session">✕</button>
+    </div>
 
     <nav class="presets" id="presets" aria-label="Saved views"></nav>
     <p class="preset-desc" id="preset-desc"></p>
