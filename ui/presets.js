@@ -78,6 +78,7 @@ window.GUIDELINE_PRESETS = [
       "sms.alpha.global-pre-registration.twilio-supported",
       "sms.alpha.international-pre-registration.provisioning-time",
       "sms.alpha.dynamic.use-case-restrictions",
+      "sms.alpha.help.registration-article",
     ],
     withoutWeatherReport: {
       description: "Dynamic vs pre-registered alphanumeric sender IDs, provisioning time and restrictions.",
@@ -95,6 +96,7 @@ window.GUIDELINE_PRESETS = [
       "sms.numbers.short-code.provisioning-time",
       "sms.numbers.short-code.sender-id-preserved",
       "sms.numbers.short-code.use-case-restrictions",
+      "sms.numbers.short-code.best-practices-article",
     ],
     sort: { id: "wr.shortcode.availability", dir: "asc" },
     withoutWeatherReport: {

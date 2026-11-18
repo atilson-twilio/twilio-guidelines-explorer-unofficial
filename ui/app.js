@@ -206,9 +206,28 @@
     if (col.channel === "porting" || (col.channel === "wr" && col.group === "porting")) links = [...porting, regulatory];
     else if (col.channel === "wr") links = [regulatory];
     else links = [u[col.channel] && { url: u[col.channel], text: `Open Twilio ${CHANNEL_LABEL[col.channel]} guidelines for ${n}` }];
+    // Alphanumeric sender ID and short code columns also link the country's Help Center articles.
+    if (col.id !== ALPHA_HELP && (col.group === "alpha" || col.group === "senderid")) links.push(...helpLinks(country, ALPHA_HELP, "alphanumeric sender ID registration"));
+    if (col.id !== SHORTCODE_HELP && (/^sms\.numbers\.short-code\./.test(col.id) || col.group === "shortcode"))
+      links.push(...helpLinks(country, SHORTCODE_HELP, "short code best practices"));
     return links.filter(Boolean);
   }
   const linkHtml = (l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${l.text} ↗</a>`;
+
+  /** Help Center article links (columns of kind "link"): one clickable line per article. */
+  const linkCell = (v, terms = []) =>
+    `<div class="cell-text links">` +
+    v.t
+      .split("\n")
+      .map((title, i) => (/^https?:\/\//.test(v.u?.[i] || "") ? `<a href="${esc(v.u[i])}" target="_blank" rel="noopener noreferrer">${hl(title, terms)} ↗</a>` : hl(title, terms)))
+      .join("") +
+    `</div>`;
+
+  /** Help Center articles for a country, by column id, as info links. */
+  const helpLinks = (country, id, what) =>
+    (country.values[id]?.u || []).map((url, i) => ({ url, text: esc(country.values[id].t.split("\n")[i] || `${country.name} ${what}`) }));
+  const ALPHA_HELP = "sms.alpha.help.registration-article";
+  const SHORTCODE_HELP = "sms.numbers.short-code.best-practices-article";
 
   const flag = (iso) =>
     /^[A-Z]{2}$/.test(iso) ? String.fromCodePoint(...[...iso].map((ch) => 0x1f1e6 + ch.charCodeAt(0) - 65)) : "";
@@ -459,7 +478,7 @@
       const ta = a.values[col.id]?.t || "";
       const tb = b.values[col.id]?.t || "";
       if (col.numeric) return dir * (parseFloat(ta) - parseFloat(tb)) || byName(a, b);
-      return (col.kind === "text" ? dir * ta.localeCompare(tb) : 0) || byName(a, b);
+      return (col.kind !== "status" ? dir * ta.localeCompare(tb) : 0) || byName(a, b);
     });
   }
 
@@ -590,6 +609,7 @@
               const src = "ov" in v ? `<span class="src" title="The Weather Report wins over the guideline page; click for both">per Weather Report</span>` : "";
               return `<td ${attrs}><span class="badge ${v.s}" title="${esc(lines[0])}">${hl(lines[0], terms)}</span>${src}${recent}${more}</td>`;
             }
+            if (col.kind === "link") return `<td ${attrs}>${linkCell(v, terms)}</td>`;
             return `<td ${attrs}><div class="cell-text">${hl(v.t, terms)}</div></td>`;
           })
           .join("");
@@ -805,6 +825,8 @@
         )
         .join("") +
       (c.urls.portingFaq ? `<a href="${esc(c.urls.portingFaq)}" target="_blank" rel="noopener noreferrer">Porting FAQ ↗</a>` : "") +
+      (c.values[ALPHA_HELP]?.u || []).map((url) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Alphanumeric sender ID registration ↗</a>`).join("") +
+      (c.values[SHORTCODE_HELP]?.u || []).map((url) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Short code best practices ↗</a>`).join("") +
       (c.urls.regulatory ? `<a href="${esc(c.urls.regulatory)}" target="_blank" rel="noopener noreferrer">Twilio regulatory requirements ↗</a>` : "");
     const disagree = c.values["wr.check.disagreements"];
     const body =
@@ -923,7 +945,7 @@
     const lines = [head.map(q).join(",")];
     for (const c of viewRows) {
       lines.push(
-        [c.name, c.iso, c.region, c.dialingCode, ...viewCols.map((col) => c.values[col.id]?.t ?? ""), c.urls.sms || "", c.urls.voice || ""]
+        [c.name, c.iso, c.region, c.dialingCode, ...viewCols.map((col) => (col.kind === "link" ? (c.values[col.id]?.u || []).join(" ") : c.values[col.id]?.t ?? "")), c.urls.sms || "", c.urls.voice || ""]
           .concat(showsPorting ? [c.urls.porting || "", c.urls.portingFaq || ""] : [])
           .map(q)
           .join(","),
@@ -1044,6 +1066,7 @@
       return;
     }
     if (e.target.matches("[data-select]")) return;
+    if (e.target.closest("td.cell a[href^='http']")) return; // Help Center links open directly
     const td = e.target.closest("td.cell");
     if (td) {
       e.stopPropagation();
@@ -1163,6 +1186,127 @@
   });
 
   // ---------------------------------------------------------------------------
+  // Data freshness: stale-data warning and "Refresh data" (runs the scraper via `npm start`)
+  // ---------------------------------------------------------------------------
+
+  const STALE_DAYS = 7;
+  const SCRAPE_API = "api/scrape";
+  const refreshBtns = [$("#btn-refresh"), $("#stale-refresh")];
+  let scrapePoll = null;
+
+  function renderStaleBanner() {
+    const ageDays = (Date.now() - new Date(DATA.generatedAt).getTime()) / 86400000;
+    const banner = $("#stale-banner");
+    if (!(ageDays > STALE_DAYS) || sessionStorage.getItem("staleDismissed") === DATA.generatedAt) {
+      banner.hidden = true;
+      return;
+    }
+    const days = Math.floor(ageDays);
+    $("#stale-text").textContent =
+      `This data was last scraped ${days} day${days === 1 ? "" : "s"} ago (${fmtDate(DATA.generatedAt)}). ` +
+      `Twilio may have changed its guidelines since then.`;
+    banner.hidden = false;
+  }
+
+  function setRefreshBusy(busy) {
+    for (const b of refreshBtns) {
+      b.disabled = busy;
+      b.textContent = busy ? "Refreshing…" : "Refresh data";
+    }
+  }
+
+  /** Drawer explaining how to refresh when the page isn't served by `npm start`. */
+  function showRefreshHelp() {
+    openDrawer(
+      "Refresh data",
+      `<p>Running the scraper from the page needs the local server. In the repository folder, run:</p>` +
+        `<pre class="scrape-log">npm install\nnpm start</pre>` +
+        `<p>Then open <a href="http://localhost:4173" target="_blank" rel="noopener noreferrer">http://localhost:4173</a> and click <b>Refresh data</b>.</p>` +
+        `<p class="na">Or run <code>npm run scrape</code> in a terminal (about 2 minutes), then reload this page.</p>`,
+    );
+  }
+
+  function renderScrapeDrawer(job) {
+    const log = $("#scrape-log");
+    if (!log || !el.drawer.classList.contains("open")) return; // the user closed it or opened something else
+    const status = $("#scrape-status");
+    if (job.running) {
+      const secs = Math.round((Date.now() - new Date(job.startedAt).getTime()) / 1000);
+      status.textContent = `Scraping Twilio's guideline pages… ${secs}s (usually about 2 minutes). You can close this panel; the page reloads when it's done.`;
+    } else if (job.exitCode === 0) {
+      status.textContent = "Done. Reloading with the new data…";
+    } else {
+      status.innerHTML = `<b class="scrape-failed">The scrape failed</b> (exit code ${esc(job.exitCode)}). The existing data was kept. See the output below.`;
+    }
+    const atBottom = log.scrollTop + log.clientHeight >= log.scrollHeight - 4;
+    log.textContent = job.log.join("\n") || "Starting…";
+    if (atBottom) log.scrollTop = log.scrollHeight;
+  }
+
+  function openScrapeDrawer(job) {
+    openDrawer("Refresh data", `<p id="scrape-status"></p><pre class="scrape-log" id="scrape-log"></pre>`);
+    renderScrapeDrawer(job);
+  }
+
+  function pollScrape() {
+    clearTimeout(scrapePoll);
+    scrapePoll = setTimeout(async () => {
+      let job;
+      try {
+        job = await (await fetch(SCRAPE_API, { cache: "no-store" })).json();
+      } catch {
+        setRefreshBusy(false);
+        toast("Lost contact with the local server (is npm start still running?)");
+        return;
+      }
+      renderScrapeDrawer(job);
+      if (job.running) return pollScrape();
+      setRefreshBusy(false);
+      if (job.exitCode === 0) {
+        toast("Data refreshed. Reloading…");
+        setTimeout(() => location.reload(), 1200);
+      } else if (!$("#scrape-log")) {
+        toast("The scrape failed; the existing data was kept. Click Refresh data to retry.");
+      }
+    }, 1500);
+  }
+
+  async function startRefresh() {
+    if (location.protocol === "file:") return showRefreshHelp();
+    let res, job;
+    try {
+      res = await fetch(SCRAPE_API, { method: "POST" });
+      job = await res.json();
+    } catch {
+      return showRefreshHelp(); // served by something other than `npm start`
+    }
+    if (!res.ok && res.status !== 409) return toast(job.error || `Could not start the scrape (HTTP ${res.status})`);
+    setRefreshBusy(true);
+    openScrapeDrawer(job);
+    pollScrape();
+  }
+
+  /** If a scrape is already running (e.g. started from another tab), show it as busy and follow it. */
+  async function resumeRefresh() {
+    if (location.protocol === "file:") return;
+    try {
+      const job = await (await fetch(SCRAPE_API, { cache: "no-store" })).json();
+      if (job.running) {
+        setRefreshBusy(true);
+        pollScrape();
+      }
+    } catch {
+      /* not served by `npm start`; the button falls back to instructions */
+    }
+  }
+
+  for (const b of refreshBtns) b.addEventListener("click", startRefresh);
+  $("#stale-dismiss").addEventListener("click", () => {
+    sessionStorage.setItem("staleDismissed", DATA.generatedAt);
+    $("#stale-banner").hidden = true;
+  });
+
+  // ---------------------------------------------------------------------------
   // Boot
   // ---------------------------------------------------------------------------
 
@@ -1170,5 +1314,7 @@
   else state.cols = COLS.slice(0, 8).map((c) => c.id);
   readHash();
   renderStatic();
+  renderStaleBanner();
   render();
+  resumeRefresh();
 })();

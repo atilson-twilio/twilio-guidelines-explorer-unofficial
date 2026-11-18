@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-18T03:30:01.940Z",
+ "generatedAt": "2026-11-18T15:31:25.486Z",
  "sources": {
   "sms": "https://www.twilio.com/en-us/guidelines/sms",
   "voice": "https://www.twilio.com/en-us/guidelines/voice",
@@ -469,6 +469,17 @@
    "coverage": 11
   },
   {
+   "id": "sms.alpha.help.registration-article",
+   "channel": "sms",
+   "group": "alpha",
+   "groupLabel": "Alphanumeric sender ID",
+   "sub": "Help Center",
+   "label": "Registration article",
+   "description": "Twilio Help Center article on registering an alphanumeric sender ID in this country (documents required and instructions).",
+   "kind": "link",
+   "coverage": 39
+  },
+  {
    "id": "sms.numbers.long-code-domestic.operator-network-capability",
    "channel": "sms",
    "group": "numbers",
@@ -698,6 +709,17 @@
    "description": "",
    "kind": "text",
    "coverage": 18
+  },
+  {
+   "id": "sms.numbers.short-code.best-practices-article",
+   "channel": "sms",
+   "group": "numbers",
+   "groupLabel": "Long codes and short codes",
+   "sub": "Short code",
+   "label": "Best practices article",
+   "description": "Twilio Help Center article on short code best practices for this country.",
+   "kind": "link",
+   "coverage": 11
   },
   {
    "id": "sms.tollfree.toll-free.operator-network-capability",
@@ -2797,6 +2819,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Argentina Short Code Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260800788930\">Argentina Short Code Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260800788930"
+     ]
     }
    }
   },
@@ -3455,6 +3485,14 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form <a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/226287108-Australia-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Registering Your Alphanumeric Sender ID for Australia in the Twilio Console",
+     "h": "<p><a href=\"https://help.twilio.com/articles/47624808819483\">Registering Your Alphanumeric Sender ID for Australia in the Twilio Console</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/47624808819483"
+     ]
     }
    }
   },
@@ -4575,6 +4613,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Bangladesh",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360043173934\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Bangladesh</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360043173934"
+     ]
     }
    }
   },
@@ -6973,6 +7019,22 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/360053581833-Brazil-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Brazil",
+     "h": "<p><a href=\"https://help.twilio.com/articles/4683203082779\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Brazil</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/4683203082779"
+     ]
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Brazil Short Code Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/4425028701467\">Brazil Short Code Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/4425028701467"
+     ]
     }
    }
   },
@@ -7621,6 +7683,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Bulgaria",
+     "h": "<p><a href=\"https://help.twilio.com/articles/53473937091867\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Bulgaria</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/53473937091867"
+     ]
     }
    }
   },
@@ -7985,6 +8055,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Burundi",
+     "h": "<p><a href=\"https://help.twilio.com/articles/49359677923099\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Burundi</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/49359677923099"
+     ]
     }
    }
   },
@@ -8168,6 +8246,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "---",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Cambodia",
+     "h": "<p><a href=\"https://help.twilio.com/articles/17332351148827\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Cambodia</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/17332351148827"
+     ]
     }
    }
   },
@@ -10217,6 +10303,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Colombia Short Code Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260800725249\">Colombia Short Code Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260800725249"
+     ]
     }
    }
   },
@@ -12838,6 +12932,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Dominican Republic Short Codes Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260800819250\">Dominican Republic Short Codes Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260800819250"
+     ]
     }
    }
   },
@@ -13303,6 +13405,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Egypt",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360040339133\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Egypt</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360040339133"
+     ]
     }
    }
   },
@@ -13559,6 +13669,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in El Salvador",
+     "h": "<p><a href=\"https://help.twilio.com/articles/43017661011099\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in El Salvador</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/43017661011099"
+     ]
     }
    }
   },
@@ -15017,6 +15135,14 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/1260806303230-Finland-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Finland",
+     "h": "<p><a href=\"https://help.twilio.com/articles/23158380084891\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Finland</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/23158380084891"
+     ]
     }
    }
   },
@@ -15311,6 +15437,22 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/360045761634-France-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "How to Register an Alphanumeric Sender ID in France",
+     "h": "<p><a href=\"https://help.twilio.com/articles/36973882933787\">How to Register an Alphanumeric Sender ID in France</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/36973882933787"
+     ]
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "France Short Code Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260803521969\">France Short Code Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260803521969"
+     ]
     }
    }
   },
@@ -16515,6 +16657,14 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/360052800574-Germany-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Germany Short Code Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260803518849\">Germany Short Code Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260803518849"
+     ]
     }
    }
   },
@@ -18322,6 +18472,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Guatemala",
+     "h": "<p><a href=\"https://help.twilio.com/articles/43261412415899\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Guatemala</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/43261412415899"
+     ]
     }
    }
   },
@@ -19673,6 +19831,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Registering Your Alphanumeric Sender ID With a Hash (#) Prefix in Hong Kong",
+     "h": "<p><a href=\"https://help.twilio.com/articles/20563757573275\">Registering Your Alphanumeric Sender ID With a Hash (#) Prefix in Hong Kong</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/20563757573275"
+     ]
     }
    }
   },
@@ -20468,6 +20634,22 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in India",
+     "h": "<p><a href=\"https://help.twilio.com/articles/21162166457755\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in India</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/21162166457755"
+     ]
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "India Short Code Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/20441562481435\">India Short Code Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/20441562481435"
+     ]
     }
    }
   },
@@ -21118,6 +21300,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Iraq",
+     "h": "<p><a href=\"https://help.twilio.com/articles/54895724559899\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Iraq</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/54895724559899"
+     ]
     }
    }
   },
@@ -21411,6 +21601,15 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/360045086314-Ireland-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Alphanumeric Sender ID Registration Process in Ireland\nDocuments Required and Instructions to Register Your Alphanumeric Sender ID in Ireland",
+     "h": "<p><a href=\"https://help.twilio.com/articles/37313903785755\">Alphanumeric Sender ID Registration Process in Ireland</a></p><p><a href=\"https://help.twilio.com/articles/33333263397787\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Ireland</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/37313903785755",
+      "https://help.twilio.com/articles/33333263397787"
+     ]
     }
    }
   },
@@ -23605,6 +23804,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Kenya",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360039841994\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Kenya</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360039841994"
+     ]
     }
    }
   },
@@ -23998,6 +24205,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Kuwait",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360043065594\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Kuwait</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360043065594"
+     ]
     }
    }
   },
@@ -28756,6 +28971,22 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/360052800714-Mexico-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Mexico",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260801524210\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Mexico</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260801524210"
+     ]
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Mexico Short Codes Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260800381110\">Mexico Short Codes Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260800381110"
+     ]
     }
    }
   },
@@ -30059,6 +30290,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Morocco",
+     "h": "<p><a href=\"https://help.twilio.com/articles/4508275593243\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Morocco</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/4508275593243"
+     ]
     }
    }
   },
@@ -30242,6 +30481,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "---",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "How to Register Your Alphanumeric Sender ID in Mozambique",
+     "h": "<p><a href=\"https://help.twilio.com/articles/23574369580827\">How to Register Your Alphanumeric Sender ID in Mozambique</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/23574369580827"
+     ]
     }
    }
   },
@@ -30424,6 +30671,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Myanmar",
+     "h": "<p><a href=\"https://help.twilio.com/articles/28029767077275\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Myanmar</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/28029767077275"
+     ]
     }
    }
   },
@@ -31799,6 +32054,14 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/360013297833-New-Zealand-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "New Zealand Short Codes Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260800614149\">New Zealand Short Codes Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260800614149"
+     ]
     }
    }
   },
@@ -32055,6 +32318,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Nicaragua",
+     "h": "<p><a href=\"https://help.twilio.com/articles/43017678465435\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Nicaragua</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/43017678465435"
+     ]
     }
    }
   },
@@ -32448,6 +32719,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Nigeria",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360039841954\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Nigeria</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360039841954"
+     ]
     }
    }
   },
@@ -33312,6 +33591,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Oman",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360041322954\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Oman</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360041322954"
+     ]
     }
    }
   },
@@ -35016,6 +35303,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Philippines",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360046676193\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Philippines</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360046676193"
+     ]
     }
    }
   },
@@ -35992,6 +36287,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "---",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Qatar",
+     "h": "<p><a href=\"https://help.twilio.com/articles/6448318408603\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Qatar</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/6448318408603"
+     ]
     }
    }
   },
@@ -36651,6 +36954,14 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/1260806327209-Romania-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Romania",
+     "h": "<p><a href=\"https://help.twilio.com/articles/7409840359067\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Romania</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/7409840359067"
+     ]
     }
    }
   },
@@ -36933,6 +37244,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Russia",
+     "h": "<p><a href=\"https://help.twilio.com/articles/4424677566491\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Russia</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/4424677566491"
+     ]
     }
    }
   },
@@ -38236,6 +38555,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Saudi Arabia",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360039841894\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Saudi Arabia</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360039841894"
+     ]
     }
    }
   },
@@ -39224,6 +39551,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Singapore",
+     "h": "<p><a href=\"https://help.twilio.com/articles/15390253628059\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Singapore</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/15390253628059"
+     ]
     }
    }
   },
@@ -41077,6 +41412,22 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/360053581813-Spain-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "How to Register Your Alphanumeric Sender ID Via Twilio in Spain",
+     "h": "<p><a href=\"https://help.twilio.com/articles/49112863248411\">How to Register Your Alphanumeric Sender ID Via Twilio in Spain</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/49112863248411"
+     ]
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Spain Short Code Best Practises",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260806116729\">Spain Short Code Best Practises</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260806116729"
+     ]
     }
    }
   },
@@ -41288,6 +41639,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Sri Lanka",
+     "h": "<p><a href=\"https://help.twilio.com/articles/1260802286550\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Sri Lanka</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/1260802286550"
+     ]
     }
    }
   },
@@ -42488,6 +42847,14 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/26250803543067-Sweden-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.numbers.short-code.best-practices-article": {
+     "t": "Swedish Short Code Best Practices",
+     "h": "<p><a href=\"https://help.twilio.com/articles/4411873684635\">Swedish Short Code Best Practices</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/4411873684635"
+     ]
     }
    }
   },
@@ -43608,6 +43975,14 @@
     "sms.numbers.short-code.best-practices": {
      "t": "N/A",
      "s": "na"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Document(s) Required and Instructions to Register Your Alphanumeric Sender ID in Tanzania",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360042501534\">Document(s) Required and Instructions to Register Your Alphanumeric Sender ID in Tanzania</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360042501534"
+     ]
     }
    }
   },
@@ -43863,6 +44238,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Thailand",
+     "h": "<p><a href=\"https://help.twilio.com/articles/5142014273307\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Thailand</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/5142014273307"
+     ]
     }
    }
   },
@@ -44875,6 +45258,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Tunisia",
+     "h": "<p><a href=\"https://help.twilio.com/articles/4416872358043\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Tunisia</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/4416872358043"
+     ]
     }
    }
   },
@@ -45131,6 +45522,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Turkey",
+     "h": "<p><a href=\"https://help.twilio.com/articles/4416881468187\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Turkey</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/4416881468187"
+     ]
     }
    }
   },
@@ -46469,6 +46868,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "How to Register your Alphanumeric Sender ID in UAE",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360046382293\">How to Register your Alphanumeric Sender ID in UAE</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360046382293"
+     ]
     }
    }
   },
@@ -46765,6 +47172,14 @@
      "t": "Please submit your request via the porting form here.\nYou can find all the requirements needed here.",
      "h": "<p>Please submit your request via the porting form&nbsp;<a href=\"https://twlo.my.salesforce-sites.com/InternationalPorting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p> <p>You can find all the requirements needed&nbsp;<a href=\"https://support.twilio.com/hc/en-us/articles/226194807-United-Kingdom-Porting\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
      "s": "info"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in United Kingdom",
+     "h": "<p><a href=\"https://help.twilio.com/articles/23737742623387\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in United Kingdom</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/23737742623387"
+     ]
     }
    }
   },
@@ -48387,6 +48802,14 @@
     "voice.emergency.outbound.emergency-services": {
      "t": "No",
      "s": "no"
+    },
+    "sms.alpha.help.registration-article": {
+     "t": "Documents Required and Instructions to Register Your Alphanumeric Sender ID in Vietnam",
+     "h": "<p><a href=\"https://help.twilio.com/articles/360040339113\">Documents Required and Instructions to Register Your Alphanumeric Sender ID in Vietnam</a></p>",
+     "s": "info",
+     "u": [
+      "https://help.twilio.com/articles/360040339113"
+     ]
     }
    }
   },
