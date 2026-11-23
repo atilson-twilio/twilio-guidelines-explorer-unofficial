@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-18T16:38:15.964Z",
+ "generatedAt": "2026-11-23T18:23:04.769Z",
  "sources": {
   "sms": "https://www.twilio.com/en-us/guidelines/sms",
   "voice": "https://www.twilio.com/en-us/guidelines/voice",
@@ -203,7 +203,7 @@
    "label": "Use case restrictions",
    "description": "",
    "kind": "text",
-   "coverage": 20
+   "coverage": 19
   },
   {
    "id": "sms.alpha.dynamic.use-case-restrictions",
@@ -214,7 +214,7 @@
    "label": "Use case restrictions",
    "description": "",
    "kind": "text",
-   "coverage": 79
+   "coverage": 80
   },
   {
    "id": "sms.alpha.global-pre-registration.best-practices",
@@ -3602,8 +3602,8 @@
      "s": "info"
     },
     "porting.guidelines.restrictions": {
-     "t": "• Most of International Phone Numbers have Voice capability only. Only Mobile numbers have Voice and SMS capabilities.\n• To port Category-C geographic numbers with associated ranges, port those numbers together or disassociate them prior to porting. To expedite, confirm the category of your geographic numbers with your current service provider prior to submitting your porting request.\n• For mobile numbers, we support porting from most of the carriers. If you are billed by a reseller. Kindly reach out to the reseller to confirm the underlying carrier of the number. As all port request is submitted directly to the carrier for approval.",
-     "h": "<ul><li>Most of International Phone Numbers have Voice capability only. Only Mobile numbers have Voice and SMS capabilities.</li><li>To port Category-C geographic numbers with associated ranges, port those numbers together or disassociate them prior to porting. To expedite, confirm the category of your geographic numbers with your current service provider prior to submitting your porting request.</li><li>For&nbsp;<b>mobile numbers</b>,&nbsp;we support porting from most of the carriers. If you are billed by a reseller. Kindly reach out to the reseller to confirm the underlying carrier of the number. As all port request is submitted directly to the carrier for approval.</li></ul>",
+     "t": "• Most of International Phone Numbers have Voice capability only. Only Mobile numbers have Voice, SMS and MMS capabilities. Note: MMS for the ported number(s) will be enabled after 24 hours from the time of port completion.\n• To port Category-C geographic numbers with associated ranges, port those numbers together or disassociate them prior to porting. To expedite, confirm the category of your geographic numbers with your current service provider prior to submitting your porting request.\n• For mobile numbers, we support porting from most of the carriers. If you are billed by a reseller. Kindly reach out to the reseller to confirm the underlying carrier of the number. As all port request is submitted directly to the carrier for approval.",
+     "h": "<ul><li>Most of International Phone Numbers have Voice capability only. Only Mobile numbers have Voice, SMS and MMS capabilities. Note: MMS for the ported number(s) will be enabled after 24 hours from the time of port completion.&nbsp;</li><li>To port Category-C geographic numbers with associated ranges, port those numbers together or disassociate them prior to porting. To expedite, confirm the category of your geographic numbers with your current service provider prior to submitting your porting request.</li><li>For&nbsp;<b>mobile numbers</b>,&nbsp;we support porting from most of the carriers. If you are billed by a reseller. Kindly reach out to the reseller to confirm the underlying carrier of the number. As all port request is submitted directly to the carrier for approval.</li></ul>",
      "s": "info"
     },
     "porting.guidelines.required-information": {
@@ -5798,8 +5798,8 @@
      "s": "yes"
     },
     "sms.alpha.dynamic.sender-id-preserved": {
-     "t": "Yes",
-     "s": "yes"
+     "t": "No",
+     "s": "no"
     },
     "sms.alpha.global-pre-registration.provisioning-time": {
      "t": "3 weeks",
@@ -5818,19 +5818,19 @@
      "s": "yes"
     },
     "sms.alpha.global-pre-registration.use-case-restrictions": {
-     "t": "For MTN network specifically, Alphanumeric Sender IDs are only supported through pre-registration.\nPromotional content is not allowed to be registered",
-     "s": "info"
+     "t": "",
+     "s": "na"
     },
     "sms.alpha.dynamic.use-case-restrictions": {
-     "t": "N/A",
-     "s": "na"
+     "t": "For MTN network specifically, Alphanumeric Sender IDs are only supported through pre-registration.\nPromotional content is not allowed to be registered",
+     "s": "info"
     },
     "sms.alpha.global-pre-registration.best-practices": {
      "t": "Please refrain from requesting generic sender IDs to avoid being blocked by network operators.",
      "s": "info"
     },
     "sms.alpha.dynamic.best-practices": {
-     "t": "N/A",
+     "t": "",
      "s": "na"
     },
     "sms.numbers.long-code-domestic.operator-network-capability": {
@@ -42793,8 +42793,8 @@
      "s": "na"
     },
     "porting.guidelines.portable-numbers": {
-     "t": "• Geographic (local) numbers (+348, +349)\n• Non-geographic numbers (+34901, +34902)\n• Toll-Free numbers (+34900, +34800)",
-     "h": "<ul><li>Geographic (local) numbers (+348, +349)</li><li>Non-geographic numbers (+34901, +34902)</li><li>Toll-Free numbers (+34900, +34800)</li></ul>",
+     "t": "• Geographic (local) numbers (+348, +349)\n• Non-geographic numbers (+34901, +34902)",
+     "h": "<ul><li>Geographic (local) numbers (+348, +349)</li><li>Non-geographic numbers (+34901, +34902)</li></ul>",
      "s": "info"
     },
     "porting.guidelines.restrictions": {
@@ -42803,13 +42803,13 @@
      "s": "info"
     },
     "porting.guidelines.required-information": {
-     "t": "• Letter of Authorization dated within the last 30 days:\n• Geo and Non-Geo Letter of Authorization (LOA)\n• Toll-Free Letter of Authorization (LOA)\n• Applicable regulatory compliance documentation",
-     "h": "<ul><li>Letter of Authorization&nbsp;dated within the last 30 days:<ul><li><a href=\"https://twilio.zendesk.com/hc/article_attachments/360089192654/Spain_Geo_Non-Geo_LOA.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Geo and Non-Geo Letter of Authorization (LOA)</a></li><li><a href=\"https://www.twilio.com/content/dam/twilio-com/global/en/guidelines/spain-tf-loa--pdf-.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Toll-Free&nbsp;Letter of Authorization (LOA)</a></li></ul> </li><li><a href=\"https://www.twilio.com/guidelines/es/regulatory\" target=\"_blank\" rel=\"noopener noreferrer\">Applicable regulatory compliance documentation</a></li></ul>",
+     "t": "• Letter of Authorization dated within the last 30 days:\n• Geo and Non-Geo Letter of Authorization (LOA)\n• Applicable regulatory compliance documentation",
+     "h": "<ul><li>Letter of Authorization&nbsp;dated within the last 30 days:<ul><li><a href=\"https://twilio.zendesk.com/hc/article_attachments/360089192654/Spain_Geo_Non-Geo_LOA.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Geo and Non-Geo Letter of Authorization (LOA)</a></li></ul> </li><li><a href=\"https://www.twilio.com/guidelines/es/regulatory\" target=\"_blank\" rel=\"noopener noreferrer\">Applicable regulatory compliance documentation</a></li></ul>",
      "s": "info"
     },
     "porting.guidelines.timeframe": {
-     "t": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\n• For Toll-Free numbers up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period.",
-     "h": "<p>Once you submit all required documentation/information:</p> <ul><li>For Geographic (local) and&nbsp;Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.</li><li>For Toll-Free numbers up to 4 weeks, depending on the complexity of the port and time required by the current service provider.<br> &nbsp;</li></ul> <p><b>Year-End Holiday Porting Schedule</b></p> <p>Please note the upcoming holiday completion pause schedules for number porting:</p> <p>·&nbsp; &nbsp; &nbsp; <b>International porting (excluding US, Canada &amp; Puerto Rico):</b> Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.</p> <p>·&nbsp; &nbsp; &nbsp; <b>US, Canada &amp; Puerto Rico porting:</b> Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).</p> <p>The Twilio Porting Team will continue accepting and processing new requests throughout this period.</p>",
+     "t": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period.",
+     "h": "<p>Once you submit all required documentation/information:</p> <ul><li>For Geographic (local) and&nbsp;Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.</li></ul> <p><b>Year-End Holiday Porting Schedule</b></p> <p>Please note the upcoming holiday completion pause schedules for number porting:</p> <p>·&nbsp; &nbsp; &nbsp; <b>International porting (excluding US, Canada &amp; Puerto Rico):</b> Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.</p> <p>·&nbsp; &nbsp; &nbsp; <b>US, Canada &amp; Puerto Rico porting:</b> Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).</p> <p>The Twilio Porting Team will continue accepting and processing new requests throughout this period.</p>",
      "s": "info"
     },
     "porting.guidelines.regulatory-bodies": {

@@ -1,5 +1,59 @@
 [
  {
+  "date": "2026-11-23T18:23:05.016Z",
+  "previous": "2026-11-18T16:38:15.964Z",
+  "changes": [
+   {
+    "iso": "AU",
+    "column": "porting.guidelines.restrictions",
+    "before": "• Most of International Phone Numbers have Voice capability only. Only Mobile numbers have Voice and SMS capabilities.\n• To port Category-C geographic numbers with associated ranges, port those numbers together or disassociate them prior to porting. To expedite, confirm the category of your geographic numbers with your current service provider prior to submitting your porting request.\n• For mobile numbers, we support porting from most of the carriers. If you are billed by a reseller. Kindly reach out to the reseller to confirm the underlying carrier of the number. As all port request is submitted directly to the carrier for approval.",
+    "after": "• Most of International Phone Numbers have Voice capability only. Only Mobile numbers have Voice, SMS and MMS capabilities. Note: MMS for the ported number(s) will be enabled after 24 hours from the time of port completion.\n• To port Category-C geographic numbers with associated ranges, port those numbers together or disassociate them prior to porting. To expedite, confirm the category of your geographic numbers with your current service provider prior to submitting your porting request.\n• For mobile numbers, we support porting from most of the carriers. If you are billed by a reseller. Kindly reach out to the reseller to confirm the underlying carrier of the number. As all port request is submitted directly to the carrier for approval."
+   },
+   {
+    "iso": "BJ",
+    "column": "sms.alpha.dynamic.sender-id-preserved",
+    "before": "Yes",
+    "after": "No"
+   },
+   {
+    "iso": "BJ",
+    "column": "sms.alpha.global-pre-registration.use-case-restrictions",
+    "before": "For MTN network specifically, Alphanumeric Sender IDs are only supported through pre-registration.\nPromotional content is not allowed to be registered",
+    "after": ""
+   },
+   {
+    "iso": "BJ",
+    "column": "sms.alpha.dynamic.use-case-restrictions",
+    "before": "N/A",
+    "after": "For MTN network specifically, Alphanumeric Sender IDs are only supported through pre-registration.\nPromotional content is not allowed to be registered"
+   },
+   {
+    "iso": "BJ",
+    "column": "sms.alpha.dynamic.best-practices",
+    "before": "N/A",
+    "after": ""
+   },
+   {
+    "iso": "ES",
+    "column": "porting.guidelines.portable-numbers",
+    "before": "• Geographic (local) numbers (+348, +349)\n• Non-geographic numbers (+34901, +34902)\n• Toll-Free numbers (+34900, +34800)",
+    "after": "• Geographic (local) numbers (+348, +349)\n• Non-geographic numbers (+34901, +34902)"
+   },
+   {
+    "iso": "ES",
+    "column": "porting.guidelines.required-information",
+    "before": "• Letter of Authorization dated within the last 30 days:\n• Geo and Non-Geo Letter of Authorization (LOA)\n• Toll-Free Letter of Authorization (LOA)\n• Applicable regulatory compliance documentation",
+    "after": "• Letter of Authorization dated within the last 30 days:\n• Geo and Non-Geo Letter of Authorization (LOA)\n• Applicable regulatory compliance documentation"
+   },
+   {
+    "iso": "ES",
+    "column": "porting.guidelines.timeframe",
+    "before": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\n• For Toll-Free numbers up to 4 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period.",
+    "after": "Once you submit all required documentation/information:\n• For Geographic (local) and Non-geographic up to 2 weeks, depending on the complexity of the port and time required by the current service provider.\nYear-End Holiday Porting Schedule\nPlease note the upcoming holiday completion pause schedules for number porting:\n· International porting (excluding US, Canada & Puerto Rico): Pause from December 19, 2026 – January 4, 2027; completions resume January 5, 2027.\n· US, Canada & Puerto Rico porting: Completions pause only on banking holidays (December 24, December 25, 2026, and January 1, 2027).\nThe Twilio Porting Team will continue accepting and processing new requests throughout this period."
+   }
+  ]
+ },
+ {
   "date": "2026-11-18T03:30:01.997Z",
   "previous": "2026-11-18T03:01:07.665Z",
   "changes": [
